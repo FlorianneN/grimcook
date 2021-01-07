@@ -1,0 +1,1093 @@
+@import '~antd/dist/antd.css';
+
+
+.Login-input{
+  margin: 15px;
+  width: 400px;
+}
+
+
+
+.Sign .Login-input{
+  width: 250px;
+}
+
+.HomeThemes{
+  margin-left: 50px;
+  margin-right: 50px;
+  margin-top: 20px;
+}
+
+
+.Card{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+}
+
+/* ------- TYPO -------- */
+@import url('https://fonts.googleapis.com/css2?family=Grand+Hotel&family=Roboto:wght@400;700&display=swap');
+body,
+p, .body-like,
+h1, .h1-like,
+h2, .h2-like,
+h3, .h3-like,
+h4, .h4-like,
+h5, .h5-like,
+h6, .h6-like { 
+	font-family: 'Grand Hotel', cursive;
+
+	color: white;
+	line-height: 1.2;
+	margin: 0 0 0.625em 0;
+}
+h1, .h1-like {
+	font-size: 2.5em;
+}
+h2, .h2-like {
+	font-size: 2em;
+}
+h3, .h3-like {
+	font-family: 'Roboto', sans-serif;
+	font-weight: 700;
+	font-size: 1.5em;
+}
+h4, .h4-like {
+	font-size: 1.25em;
+}
+h5, .h5-like {
+	font-family: 'Roboto', sans-serif;
+	font-weight: 700;
+	font-size: 1em;
+}
+h6, .h6-like {
+	font-size: 1.1em;
+}
+
+p, ul, .body-like {
+	font-family: 'Roboto', sans-serif;
+	font-weight: 400;
+	font-size: 1em;
+}
+
+.label {
+  font-family: 'Roboto', sans-serif;
+  font-style: italic;
+  font-size: 1em;
+}
+
+
+.txt-white{
+  color: rgb(14, 14, 14);
+}
+
+.txt-pink{
+	color: #fc78ab;
+}
+
+.txt-purple{
+	color: #631a36;
+}
+
+.txt-blue{
+	color: #229de5;
+}  
+
+.txt-left {
+	text-align: left;
+}
+.txt-center {
+	text-align: center;
+}
+.txt-right {
+	text-align: right;
+}
+
+/* ------- HELPERS -------- */
+
+.no-show {
+  display: none;
+}
+
+.ul-clean {
+  list-style-type: none;
+}
+
+/*
+	m = margin
+	a, t, b = all, top, bottom
+	n, s, m, l = none, small, medium, large
+*/
+
+.man {
+	margin: 0;
+}
+.mas {
+	margin: 20px;
+}
+.mam {
+	margin: 40px;
+}
+.mal {
+	margin: 60px;
+}
+
+.mln {
+	margin-left: 0;
+}
+
+.mlxs {
+	margin-left: 10px;
+}
+.mls {
+	margin-left: 20px;
+}
+.mlm {
+	margin-left: 40px;
+}
+.mll {
+	margin-left: 60px;
+}
+
+.mrneg {
+	margin-right: -10px;
+}
+.mrn {
+	margin-right: 0;
+}
+.mrxs {
+	margin-right: 10px;
+}
+.mrs {
+	margin-right: 20px;
+}
+.mrm {
+	margin-right: 40px;
+}
+.mrl {
+	margin-right: 60px;
+}
+
+.mtn {
+	margin-top: 0;
+}
+
+.mtxs {
+	margin-top: 10px;
+}
+.mts {
+	margin-top: 20px;
+}
+.mtm {
+	margin-top: 40px;
+}
+.mtl {
+	margin-top: 60px;
+}
+
+
+.mbn {
+	margin-bottom: 0;
+}
+.mbxs {
+	margin-bottom: 10px;
+}
+.mbs {
+	margin-bottom: 20px;
+}
+.mbm {
+	margin-bottom: 40px;
+}
+.mbl {
+	margin-bottom: 60px;
+}
+
+.pas {
+	padding: 20px;
+}
+
+.ptn {
+	padding-top: 0px;
+}
+.pts {
+	padding-top: 20px;
+}
+.ptm {
+	padding-top: 50px;
+}
+.ptl {
+	padding-top: 100px;
+}
+
+
+
+.pbn {
+	padding-bottom: 0px;
+}
+.pbs {
+	padding-bottom: 20px;
+}
+.pbm {
+	padding-bottom: 50px;
+}
+.pbl {
+	padding-bottom: 100px;
+}
+
+
+.pln {
+	padding-left: 0px;
+}
+.pls {
+	padding-left: 10px;
+}
+.plm {
+	padding-left: 30px;
+}
+.pll {
+	padding-left: 100px;
+}
+.plxl {
+	padding-left: 15em;
+}
+
+.prn {
+	padding-right: 0px;
+}
+.prs {
+	padding-right: 10px;
+}
+.prm {
+	padding-right: 30px;
+}
+.prl {
+	padding-right: 100px;
+}
+
+/* ------- Navigation -------- */
+
+.nav-header {
+  background-color: #fc78ab;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  justify-content: center;
+  align-items: center;
+  padding-top: 1em;
+
+}
+
+ .nav-menu{
+  margin-right: 2em;
+  color: white;
+  text-decoration: none;
+  font-family: 'Grand Hotel', cursive;
+  font-size: 2em;
+}
+
+.nav-menu:hover {
+  margin-right: 2em;
+  color: #631a36;
+  text-decoration: none;
+} 
+
+.current {
+	text-decoration: underline;
+}
+
+/* ------- GENERAL -------- */
+
+.body {
+background-color: #131313;
+height: 100vh;
+}
+/* ------- Bouton -------- */
+
+/* txt-pink{
+	color: #fc78ab;
+}
+
+.txt-purple{
+	color: #631a36;
+}
+
+.txt-blue{
+	color: #229de5;
+}  */
+
+.button {
+  display: inline-block;
+  background-color: #631a36;
+	color: white;
+	padding: 0 1.25em;
+	text-decoration: none;
+  font-size: 1.25em;
+  border-radius: 1.5em;
+  height: 2em;
+}
+.button-secondary {
+	display: inline-block;
+  background-color: #229de5;
+	color: white;
+	padding: 0 1.25em;
+	text-decoration: none;
+  font-size: 1.25em;
+  border-radius: 1.5em;
+  height: 2em;
+  }
+
+
+.button:hover {
+  background-color: #fc78ab;
+  border-radius: 1.5em;
+	
+}
+
+.button-secondary:hover {
+	background-color: #fc78ab;
+	
+}
+
+
+/* ------- COMPOSANTS -------- */
+
+
+/* ---- ACCUEIL/CONNEXION----- */
+
+.banner-accueil{
+  /* height: 10em; */
+  background-image: url('./img/jane-yokata-ZNtT8W11HFQ-unsplash.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 25em;
+  
+}
+.banner-espace{
+  /* height: 10em; */
+  background-image: url('./img/micheile-henderson-adHBexOJ1qQ-unsplash.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 25em;
+  
+}
+
+.Login-page{
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: center;
+  background-color: #229de5;
+  }
+
+
+.Sign {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 15px;
+  border-radius: 10%;
+  /* border:2px solid #631a36; */
+  margin: 40px;
+}
+
+.Login-input{
+margin: 15px;
+width: 60%;
+padding-top: 0.5em;
+padding-bottom: 0.5em;
+border :2px solid #631a36;
+border-radius: 10px;
+padding-left: 10px;
+font-size: 1em;
+}
+
+.Sign .Login-input{
+width: 250px;
+}
+
+/* ------Home ---- */
+.box-1{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	padding-bottom: 15px;
+	border-radius: 1em;
+	border-color: #242424;
+	background-color: #202020;
+  padding: 5%;
+  margin-bottom: 50px;
+}
+
+.box-recette{
+  display: flex;
+	flex-direction: column;
+	/* align-items: center;
+	justify-content: center; */
+  padding: 5%;
+  margin-left: 2%;
+	border-radius: 1em;
+	border-color: #631a36;
+  background-color: #631a36;
+  margin-bottom: 50px;
+}
+
+.recette-input{
+  
+  width: 60%;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  border :2px solid #631a36;
+  border-radius: 10px;
+  padding-left: 10px;
+  font-size: 1em;
+  
+  }
+  
+/*-------------------------------------------------------------------------------------------------------------------------------------*/
+/* --------------------------------------------------------CSS GRID PERSONNEL */
+/*-----------------------------------------------------------------------------------------------------------------*/
+/*
+Flex container = grid
+Flex items     = les enfants DIRECTS de grid recevront le display flex
+*/
+
+.grid-no-wrap {
+	display: flex;
+  flex-wrap: inherit;
+}
+.grid-no-padding {
+	display: flex;
+	flex-wrap: wrap;
+}
+.grid {
+	display: flex;
+	flex-wrap: wrap; /* retour Ã  la ligne des flex items en fonction de leur tailles*/
+	margin-right: -10px;
+	margin-left: -10px;
+}
+
+[class*="col-"] {
+	width: 100%;
+}
+
+.grid [class*="col-"] { /* 	sÃ©lecteur hiÃ©rarchique d'attribut 
+							CSS3 car il y a class* */
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+/* calcul pour une col = 100% / 12 colonnes*/
+.col-m-1 { 
+	width: 8.333%;
+}
+.col-m-2 { 
+	width: 16.667%;
+}
+.col-m-3 { 
+	width: 25%;
+}
+.col-m-4 { 
+	width: 33.333%;
+}
+.col-m-5 { 
+	width: 41.667%;
+}
+.col-m-6 { 
+	width: 50%;
+}
+.col-m-7 { 
+	width: 58.333%;
+}
+.col-m-8 { 
+	width: 66.667%;
+}
+.col-m-9 { 
+	width: 75%;
+}
+.col-m-10 { 
+	width: 83.333%;
+}
+.col-m-11 { 
+	width: 91.667%;
+}
+.col-m-12 { 
+	width: 100%;
+}
+
+.order-m-1 {
+	order: 1;
+}
+.order-m-2 {
+	order: 2;
+}
+.order-m-3 {
+	order: 3;
+}
+.order-m-4 {
+	order: 4;
+}
+.order-m-5 {
+	order: 5;
+}
+.order-m-6 {
+	order: 6;
+}
+.order-m-7 {
+	order: 7;
+}
+.order-m-8 {
+	order: 8;
+}
+.order-m-9 {
+	order: 9;
+}
+.order-m-10 {
+	order: 10;
+}
+.order-m-11 {
+	order: 11;
+}
+.order-m-12 {
+	order: 12;
+}
+
+
+
+.offset-m-0 {
+	margin-left: 0;
+}
+
+.offset-m-1-1 {
+	margin-left: 5%;
+}
+
+.offset-m-1 {
+	margin-left: 8.333%;
+}
+.offset-m-2 {
+	margin-left: 16.667%;
+}
+.offset-m-3 {
+	margin-left: 25%;
+}
+.offset-m-4 {
+	margin-left: 33.333%;
+}
+.offset-m-5 {
+	margin-left: 41.667%;
+}
+.offset-m-6 {
+	margin-left: 50%;
+}
+.offset-m-7 {
+	margin-left: 58.333%;
+}
+.offset-m-8 {
+	margin-left: 66.667%;
+}
+.offset-m-9 {
+	margin-left: 75%;
+}
+.offset-m-10 {
+	margin-left: 83.333%;
+}
+.offset-m-11 {
+	margin-left: 91.667%;
+}
+.offset-m-12 {
+	margin-left: 100%;
+}
+
+
+.offset-m-r-0 {
+	margin-right: 0;
+}
+
+.offset-m-r-1-1 {
+	margin-right: 5%;
+}
+
+.offset-m-r-1 {
+	margin-right: 8.333%;
+}
+.offset-m-r-2 {
+	margin-right: 16.667%;
+}
+.offset-m-r-3 {
+	margin-right: 25%;
+}
+.offset-m-r-4 {
+	margin-right: 33.333%;
+}
+.offset-m-r-5 {
+	margin-right: 41.667%;
+}
+.offset-m-r-6 {
+	margin-right: 50%;
+}
+.offset-m-r-7 {
+	margin-right: 58.333%;
+}
+.offset-m-r-8 {
+	margin-right: 66.667%;
+}
+.offset-m-r-9 {
+	margin-right: 75%;
+}
+.offset-m-r-10 {
+	margin-right: 83.333%;
+}
+.offset-m-r-11 {
+	margin-right: 91.667%;
+}
+.offset-m-r-12 {
+	margin-right: 100%;
+}
+
+.hide-m {
+	display: none;
+}
+.show-m {
+	display: block;
+}
+
+.mtneg {
+		margin-top: -40px;
+	}
+
+.mbneg {
+		margin-bottom: -40px;
+	}
+
+.mlneg {
+		margin-left: -40px;
+	}
+
+.mrneg {
+		margin-right: -40px;
+	}
+
+
+
+/* tablet view */
+/*--------------------------*/
+@media (min-width: 481px){
+	.col-t-1 {
+		width: 8.333%;
+	}
+	.col-t-2 {
+		width: 16.667%;
+	}
+	.col-t-3 {
+		width: 25%;
+	}
+	.col-t-4 {
+		width: 33.333%;
+	}
+	.col-t-5 {
+		width: 41.667%;
+	}
+	.col-t-6 {
+		width: 50%;
+	}
+	.col-t-7 {
+		width: 58.333%;
+	}
+	.col-t-8 {
+		width: 66.667%;
+	}
+	.col-t-9 {
+		width: 75%;
+	}
+	.col-t-10 {
+		width: 83.333%;
+	}
+	.col-t-11 {
+		width: 91.667%;
+	}
+	.col-t-12 {
+		width: 100%;
+	}
+
+	.order-t-1 {
+		order: 1;
+	}
+	.order-t-2 {
+		order: 2;
+	}
+	.order-t-3 {
+		order: 3;
+	}
+	.order-t-4 {
+		order: 4;
+	}
+	.order-t-5 {
+		order: 5;
+	}
+	.order-t-6 {
+		order: 6;
+	}
+	.order-t-7 {
+		order: 7;
+	}
+	.order-t-8 {
+		order: 8;
+	}
+	.order-t-9 {
+		order: 9;
+	}
+	.order-t-10 {
+		order: 10;
+	}
+	.order-t-11 {
+		order: 11;
+	}
+	.order-t-12 {
+		order: 12;
+	}
+
+
+	.offset-t-0 {
+		margin-left: 0;
+	}
+	.offset-t-1 {
+		margin-left: 8.333%;
+	}
+	.offset-t-2 {
+		margin-left: 16.667%;
+	}
+	.offset-t-3 {
+		margin-left: 25%;
+	}
+	.offset-t-4 {
+		margin-left: 33.333%;
+	}
+	.offset-t-5 {
+		margin-left: 41.667%;
+	}
+	.offset-t-6 {
+		margin-left: 50%;
+	}
+	.offset-t-7 {
+		margin-left: 58.333%;
+	}
+	.offset-t-8 {
+		margin-left: 66.667%;
+	}
+	.offset-t-9 {
+		margin-left: 75%;
+	}
+	.offset-t-10 {
+		margin-left: 83.333%;
+	}
+	.offset-t-11 {
+		margin-left: 91.667%;
+	}
+	.offset-t-12 {
+		margin-left: 100%;
+	}
+
+
+	.offset-t-r-0 {
+		margin-right: 0;
+	}
+	.offset-t-r-1 {
+		margin-right: 8.333%;
+	}
+	.offset-t-r-2 {
+		margin-right: 16.667%;
+	}
+	.offset-t-r-3 {
+		margin-right: 25%;
+	}
+	.offset-t-r-4 {
+		margin-right: 33.333%;
+	}
+	.offset-t-r-5 {
+		margin-right: 41.667%;
+	}
+	.offset-t-r-6 {
+		margin-right: 50%;
+	}
+	.offset-t-r-7 {
+		margin-right: 58.333%;
+	}
+	.offset-t-r-8 {
+		margin-right: 66.667%;
+	}
+	.offset-t-r-9 {
+		margin-right: 75%;
+	}
+	.offset-t-r-10 {
+		margin-right: 83.333%;
+	}
+	.offset-t-r-11 {
+		margin-right: 91.667%;
+	}
+	.offset-t-r-12 {
+		margin-right: 100%;
+	}
+
+
+	.txt-t-center {
+		text-align: center;
+	}
+
+	.hide-t {
+		display: none;
+	}
+	.show-t {
+		display: block;
+	}
+
+	
+	.m-t-tn {
+	margin-top: 0;
+
+	}
+	.m-t-ts {
+		margin-top: 20px;
+	}
+	.m-t-tm {
+		margin-top: 40px;
+	}
+	.m-t-tl {
+		margin-top: 60px;
+	}
+	.m-t-bn {
+		margin-bottom: 0;
+	}
+
+	.m-t-bs {
+		margin-bottom: 20px;
+	}
+	.m-t-bs {
+		margin-bottom: 20px;
+	}
+	.m-t-bm {
+		margin-bottom: 40px;
+	}
+
+}/*--end of tablet view-----*/
+
+/* desktop view */
+/*--------------------------*/
+@media (min-width: 769px){
+	.col-d-1 {
+		width: 8.333%;
+	}
+	.col-d-2 {
+		width: 16.667%;
+	}
+	.col-d-3 {
+		width: 25%;
+	}
+	.col-d-4 {
+		width: 33.333%;
+	}
+	.col-d-5 {
+		width: 41.667%;
+	}
+	.col-d-6 {
+		width: 50%;
+	}
+	.col-d-7 {
+		width: 58.333%;
+	}
+	.col-d-8 {
+		width: 66.667%;
+	}
+	.col-d-9 {
+		width: 75%;
+	}
+	.col-d-10 {
+		width: 83.333%;
+	}
+	.col-d-11 {
+		width: 91.667%;
+	}
+	.col-d-12 {
+		width: 100%;
+	}
+
+	.order-d-1 {
+		order: 1;
+	}
+	.order-d-2 {
+		order: 2;
+	}
+	.order-d-3 {
+		order: 3;
+	}
+	.order-d-4 {
+		order: 4;
+	}
+	.order-d-5 {
+		order: 5;
+	}
+	.order-d-6 {
+		order: 6;
+	}
+	.order-d-7 {
+		order: 7;
+	}
+	.order-d-8 {
+		order: 8;
+	}
+	.order-d-9 {
+		order: 9;
+	}
+	.order-d-10 {
+		order: 10;
+	}
+	.order-d-11 {
+		order: 11;
+	}
+	.order-d-12 {
+		order: 12;
+	}
+
+
+	.offset-d-0 {
+		margin-left: 0;
+	}
+	.offset-d-1 {
+		margin-left: 8.333%;
+	}
+	.offset-d-2 {
+		margin-left: 16.667%;
+	}
+	.offset-d-3 {
+		margin-left: 25%;
+	}
+	.offset-d-4 {
+		margin-left: 33.333%;
+	}
+	.offset-d-5 {
+		margin-left: 41.667%;
+	}
+	.offset-d-6 {
+		margin-left: 50%;
+	}
+	.offset-d-7 {
+		margin-left: 58.333%;
+	}
+	.offset-d-8 {
+		margin-left: 66.667%;
+	}
+	.offset-d-9 {
+		margin-left: 75%;
+	}
+	.offset-d-10 {
+		margin-left: 83.333%;
+	}
+	.offset-d-11 {
+		margin-left: 91.667%;
+	}
+	.offset-d-12 {
+		margin-left: 100%;
+	}
+
+	.offset-d-r-0 {
+		margin-right: 0;
+	}
+	.offset-d-r-1 {
+		margin-right: 8.333%;
+	}
+	.offset-d-r-2 {
+		margin-right: 16.667%;
+	}
+	.offset-d-r-3 {
+		margin-right: 25%;
+	}
+	.offset-d-r-4 {
+		margin-right: 33.333%;
+	}
+	.offset-d-r-5 {
+		margin-right: 41.667%;
+	}
+	.offset-d-r-6 {
+		margin-right: 50%;
+	}
+	.offset-d-r-7 {
+		margin-right: 58.333%;
+	}
+	.offset-d-r-8 {
+		margin-right: 66.667%;
+	}
+	.offset-d-r-9 {
+		margin-right: 75%;
+	}
+	.offset-d-r-10 {
+		margin-right: 83.333%;
+	}
+	.offset-d-r-11 {
+		margin-right: 91.667%;
+	}
+	.offset-d-r-12 {
+		margin-right: 100%;
+	}
+
+	.hide-d {
+		display: none;
+	}
+	.show-d {
+		display: block;
+	}
+
+	.txt-d-left {
+		text-align: left;
+	}
+
+	.txt-d-center {
+		text-align: center;
+	}
+
+	.m-d-tn {
+	margin-top: 0;
+
+	}
+	.m-d-ts {
+		margin-top: 20px;
+	}
+	.m-d-tm {
+		margin-top: 40px;
+	}
+	.m-d-tl {
+		margin-top: 60px;
+	}
+
+
+	.m-d-bn {
+		margin-bottom: 0;
+	}
+
+	.m-d-bs {
+		margin-bottom: 20px;
+	}
+	.m-d-bm {
+		margin-bottom: 40px;
+	}
+
+	.bg-d-dark {
+	background-color: #0b0b0b;
+	padding: 60px 0;
+	}
+
+	.bg-d-light {
+	padding: 60px 0;	
+}
+
+	.txt-d-color {   /* blanc gris*/
+	color: #d6d7d2;
+	}
+
+	
+
+
+}/*--end of desktop view-----*/
