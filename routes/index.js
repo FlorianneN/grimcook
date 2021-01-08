@@ -107,15 +107,13 @@ router.post('/sign-in', async function(req,res,next){
 
 router.post('/ajoutrecette', async function(req,res,next){
   
-  // if (userId) {
-  //   console.log("userId.user", userId.userId);
-  //   await recettesModel.updateMany(
-  //     { userId: userId.userId },
-  //   );
-  // }
-  
+  var result = false
+
+  var user = await userModel.findOne({token: req.body.token})
+
+  if(user != null){
   var newRecettes = new recettesModel({
-    userId: req.body.userId,
+    userId: user._id,
     nameRecette: req.body.nameRecette,
     typeRecette: req.body.typeRecette,
     recette: req.body.recette,
@@ -123,33 +121,29 @@ router.post('/ajoutrecette', async function(req,res,next){
   })
   
   var recetteSaved = await newRecettes.save();
-  
-   
-   res.json({ recetteSaved })
+  if(recetteSaved.name){
+    result = true
+  }
+} 
+   res.json({ result })
 
 
   
 })
 
-router.get('/deleterecette', async function(req,res,next){
+router.delete('/deleterecette', async function(req,res,next){
   var result = false
   var user = await userModel.findOne({token: req.body.token})
 
   if(user != null){
-    var returnDb = await recettesModel.deleteOne({title: req.body.nameRecette, userId: user._id})
+    var returnDb = await recettesModel.deleteOne({recette: req.params.recette, userId: user._id})
 
     if(returnDb.deletedCount == 1){
       result = true
     }
   }
-  console.log('route delete',req.body);
 
-  var recetteSaved = await recettesModel.deleteOne(
-    {user: req.body.idUserFromFront, title: req.body.nameRecette}
-    )
-
-  res.json({ recette: recetteSaved })
-
+  res.json({result})
 })
 
 

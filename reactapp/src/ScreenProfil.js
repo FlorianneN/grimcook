@@ -28,11 +28,8 @@ function ScreenProfil(props) {
                 var colorLike = {cursor:'pointer'}
               }
 
-              var handleAjoutRecette = async () => {
+              var handleAjoutRecette = async (nameRecette,typeRecette,recette) => {
 
-                // console.log('nare',nameRecette)
-                // console.log('trec',typeRecette)
-                // console.log('rec',recette)
                 if (nameRecette === undefined || typeRecette === undefined || recette === undefined) {
                         setErrorRecette(<Badge status="error" badgeStyle={{ color: 'white', backgroundColor: '#FF0060' }} value="Le champ est vide"></Badge>)
                         
@@ -50,7 +47,7 @@ function ScreenProfil(props) {
                 const data = await fetch('/ajoutrecette', {
                   method: 'POST',
                   headers: {'Content-Type': 'application/x-www-form-urlencoded'},
-                  body: `nameRecette=${nameRecette}&typeRecette=${typeRecette}&recette=${recette}$userId=${props.userId}`
+                  body: `nameRecette=${nameRecette}&typeRecette=${typeRecette}&recette=${recette}$token=${props.token}`
                 })
             
                 const body = await data.json()
@@ -73,7 +70,7 @@ function ScreenProfil(props) {
                                 <p className='h2-like txt-center'>Recette :</p>
                                 <p>{recette.recette}</p>
                                 <p className='h2-like txt-center mts'>Supprimer la recette <FontAwesomeIcon 
-                                // onClick={() => handledeleteRecette(recette)} 
+                                onClick={() => handledeleteRecette(recette)} 
                                 style={{cursor:'pointer'}} icon={faTrash} />
                                 </p>
                                 
@@ -82,19 +79,18 @@ function ScreenProfil(props) {
 
         })
 
-        // var handledeleteRecette = async (recette) => {
-        //         // props.deleteToWishList(recette)
+        var handledeleteRecette = async (recette) => {
             
-        //         const deleteReq = await fetch('/deleterecette', {
-        //           method: 'POST',
-        //           headers: {'Content-Type': 'application/x-www-form-urlencoded'},
-        //           body: `recette=${recette}&idUserFromFront=${props.hostId}`
-        //         })
-        //         var response = await deleteReq.json();
-        //         setError()
+                const deleteReq = await fetch('/deleterecette', {
+                  method: 'DELETE',
+                  headers: {'Content-Type': 'application/x-www-form-urlencoded'},
+                  body: `recette=${recette}&token=${props.token}`
+                })
+                // var response = await deleteReq.json();
+                // setError()
 
-        //         console.log(response);
-        //       }
+                // console.log(response);
+              }
 
       
 
@@ -114,7 +110,7 @@ function ScreenProfil(props) {
                                         <NavItem>
                                                 <NavLink href='/screenprofil' className='nav-menu current'>Accueil</NavLink>
                                         </NavItem>
-                                        <NavItem>
+                                        <NavItem className='no-show'>
                                                 <NavLink className='nav-menu'>Mes favoris</NavLink>
                                         </NavItem>
                                         <NavItem>
@@ -182,21 +178,6 @@ function ScreenProfil(props) {
                                 </div>
                         </div>
                                 {newRecette}
-                        {/* <div className="col-d-4">
-                                <div className="box-recette">
-                                         <p className='h2-like txt-center'>Mettre dans mes favoris <FontAwesomeIcon style={colorLike} icon={faHeart} onClick={() => setLikeCook(!likeCook)}/>
-                                         </p>
-                                        <p className='h2-like txt-center'>Nom :</p>
-                                        <p className='txt-center'>Les Jaffa Cakes</p>
-                                        <p className='h2-like txt-center'>Type :</p>
-                                        <p className='txt-center'>Dessert</p>
-                                        <p className='h2-like txt-center'>Recette :</p>
-                                        <p>Pour 36 Jaffa cakes.Des moules à mini-muffins ou à tartelettes de 5cm de diamètre.La génoise : 50g de beurre, 205g de farine, 330g d’oeufs, 200g de sucre. Préchauffer le four à 180°. Dans la cuve du batteur fouetter les oeufs et le sucre jusqu’à ce que le mélange triple de volume et fasse le ruban. Fondre le beurre. Prélever une petite partie de l’appareil oeufs/sucre et le mélanger avec le beurre fondu. Tamiser la farine au-dessus de l’appareil restant dans la cuve et l’incorporer délicatement à la maryse. Ajouter en dernier le mélange avec le beurre fondu. Beurrer si nécessaire les moules puis les remplir aux 3/4 avec l’appareil à génoise. Cuire environ 10min. La génoise doit rester moelleuse. La gelée d’orange : 1915g de jus d’orange fraîchement pressé, 480g de suprêmes d’orange, 125g de sucre, 260g d’eau et 52g de gélatine en poudre. Réhydrater la gélatine dans l’eau froide, bien la dissoudre et réserver au réfrigérateur pendant la suite de la préparation. Chauffer le jus d’orange et le sucre. Couper les suprêmes d’oranges en petits dés. Ajouter la gélatine réhydratée et les petits dés d’orange dans le jus chauffé avec le sucre. Débarrasser sur une ou plusieurs plaques à rebord sur une épaisseur de 6mm et bloquer au froid. Une fois la gelée prise la détailler en disques de la taille de la génoise.</p>
-                                        <p className='h2-like txt-center mts'>Supprimer la recette <FontAwesomeIcon style={{cursor:'pointer'}} icon={faTrash} />
-                                         </p>
-                                        
-                                </div>
-                        </div> */}
                  </div>
                 
         </main>
