@@ -28,7 +28,8 @@ function ScreenProfil(props) {
                 var colorLike = {cursor:'pointer'}
               }
 
-              var handleAjoutRecette = async (nameRecette,typeRecette,recette) => {
+              var handleAjoutRecette = async () => {
+
 
                 if (nameRecette === undefined || typeRecette === undefined || recette === undefined) {
                         setErrorRecette(<Badge status="error" badgeStyle={{ color: 'white', backgroundColor: '#FF0060' }} value="Le champ est vide"></Badge>)
