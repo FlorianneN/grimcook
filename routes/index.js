@@ -131,22 +131,22 @@ router.post('/ajoutrecette', async function(req,res,next){
   
 })
 
-router.post('/deleterecette', async function(req,res,next){
-  // var result = false
-  // var user = await userModel.findOne({token: req.body.token})
+router.get('/deleterecette', async function(req,res,next){
+  var result = false
+  var user = await userModel.findOne({token: req.body.token})
 
-  // if(user != null){
-  //   var returnDb = await recettesModel.deleteOne({title: req.body.nameRecette, userId: user._id})
+  if(user != null){
+    var returnDb = await recettesModel.deleteOne({title: req.body.nameRecette, userId: user._id})
 
-  //   if(returnDb.deletedCount == 1){
-  //     result = true
-  //   }
-  // }
+    if(returnDb.deletedCount == 1){
+      result = true
+    }
+  }
   console.log('route delete',req.body);
 
-  // var recetteSaved = await recettesModel.deleteOne(
-  //   {user: req.body.idUserFromFront, title: req.body.nameRecette}
-  //   )
+  var recetteSaved = await recettesModel.deleteOne(
+    {user: req.body.idUserFromFront, title: req.body.nameRecette}
+    )
 
   res.json({ recette: recetteSaved })
 
